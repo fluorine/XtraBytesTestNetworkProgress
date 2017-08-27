@@ -1,0 +1,18 @@
+<header class="site-header" role="banner">
+{% assign required_testers = site.testers_quantity_total | minus: site.data.current_testers.quantity %}
+    <img src="https://xtrabytes.global/xby_logo.png" alt="XTRABYTES LOGO">
+    <h1>XTRA<span class="highlight">BYTES</span></h1>
+    <h2>STATIC Test Network</h2>
+    <div id="myProgress">
+      <div id="myBar"></div>
+    </div>
+{% if required_testers > 0 %}
+    <p>Only {{ required_testers }} more testers required</p>
+	<ul>
+	<li><a href="{{ site.tester_link }}">{{ site.tester_line }}</a></li>
+	</ul>
+{% else %}
+    <p>We have enough testers now</p>
+{% endif %}
+    <div class="teal-spacer"></div>
+</header>

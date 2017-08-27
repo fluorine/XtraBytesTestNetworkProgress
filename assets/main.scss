@@ -1,0 +1,16 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "xtrastyle";
+
+#myProgress {
+  width: 100%;
+  background-color: #56F4F1;
+}
+
+#myBar {
+  width: {{ site.data.current_testers.quantity | times: 100 | divided_by: site.testers_quantity_total }}%;
+  height: 30px;
+  background-color: #09908e;
+}
